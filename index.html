@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="script.js"></script>
+
+    <title>Encriptador de texto</title>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img class="logo-img" src="img/Logo.png" alt="logo">
+         </div>
+        
+
+        <div class="lateralIzquierdo">
+            <input id="textoEncriptado" class="text-input" type="text"  placeholder="Ingrese el texto aquí">
+        </div>
+        
+
+        <div class="lateralDerecho">
+            <div id="ocultar-Derecho">
+                <img class="dibujo" src="img/Muñeco.png" alt="persona">
+                <h2 id="text-error">Ningún mensaje fue encontrado</h2>
+            </div>
+            
+            <textarea name="resultado" id="textoDesencriptado" cols="30" rows="7" readonly>Ingresa el texto que desees encriptar o desencriptar.</textarea>
+            <button type="button" id="botonCopiar">Copiar</button>
+        </div>
+        <div class="left-button">
+            <div>
+                <i class="fa fa-exclamation-circle" id="iconexc" aria-hidden="true"></i>
+                <p id="alerta">¡Sólo letras minúsculas y sin acentos!</p>
+            </div>
+            <div class="botones">
+                <button type="button" id="botonEncriptado">Encriptador</button>
+                <button type="button" id="botonDesencriptado">Desencriptar</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <footer class="footer">
+        <p>&copy Copyright Chrisotpher Flores - 2023</p><br>
+        <a href="https://www.linkedin.com/in/agostinavenezia/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:24px;color:#0A66C2"></i></a>
+        <a href="https://github.com/AgosVenezia" target="_blank"><i class="fa fa-github-square" style="font-size:24px;color:#24292F"></i></a>
+        <a href="https://cafecito.app/agosvenezia" target="_blank"><i class="fa fa-coffee" style="font-size:24px;color:#DF6F93"></i></a>
+        <a href="mailto:agostina.cv@gmail.com"><i class="fa fa-envelope" style="font-size:24px; color:#0071C5"></i></a>
+    </footer> -->
+</body>
+
+
+<script>
+
+    var btn = document.querySelector("#botonEncriptado");
+    btn.onclick = encriptar;
+    
+    var btn2 = document.querySelector("#botonDesencriptado");
+    btn2.onclick = desencriptar;
+
+    var btn3 = document.querySelector("#botonCopiar");
+    btn3.onclick = copiar;
+</script>
+</html>
